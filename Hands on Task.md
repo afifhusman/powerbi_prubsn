@@ -1,6 +1,4 @@
-Based on the provided financial data, here are some interesting financial analyses that can be done using the **"Discounts"** column, along with visual suggestions for both **Python (matplotlib)** and **Power BI**:
 
----
 
 ### **1. Discount Impact on Sales & Profit**
 **Objective:** Analyze how discounts affect sales revenue and profit.
