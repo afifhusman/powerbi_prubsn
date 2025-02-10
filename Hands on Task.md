@@ -44,3 +44,55 @@
 - **Power BI**: A **heatmap** comparing discount bands and profit margins.
 
 ---
+
+
+## **6. ANOVA: Discounts vs. Sales (Grouped by Discount Bands)**
+**📌 Objective:**  
+Test if there is a **significant difference in Sales** across different **Discount Bands**.
+
+**📌 Why it’s interesting?**  
+If sales differ significantly across discount bands, it suggests that certain discount levels are more effective at driving sales.
+
+**🔍 Hypothesis:**
+- **Null (H₀):** No significant difference in **Sales** across different **Discount Bands**.
+- **Alternative (H₁):** At least one discount band has a significantly different sales mean.
+
+**🛠️ ANOVA Model:**
+- **Dependent Variable:** Sales
+- **Independent Variable:** Discount Band (Categorical)
+
+---
+
+## **7. ANOVA: Discounts vs. Profit (Grouped by Country)**
+**📌 Objective:**  
+Test if the **impact of discounts on profit** varies **across different countries**.
+
+**📌 Why it’s interesting?**  
+If some countries respond better to discounts than others, businesses can optimize pricing strategies.
+
+**🔍 Hypothesis:**
+- **H₀:** No significant difference in **Profit** across different **countries**.
+- **H₁:** At least one country shows a significantly different **profit** when discounts are applied.
+
+**🛠️ ANOVA Model:**
+- **Dependent Variable:** Profit
+- **Independent Variable:** Country (Categorical)
+
+---
+
+## **8. ANOVA: Discounts vs. COGS (Grouped by Product Category)**
+**📌 Objective:**  
+Test whether **discount levels impact the cost of goods sold (COGS)** differently across **product categories**.
+
+**📌 Why it’s interesting?**  
+If some products have **higher costs associated with discounts**, it could indicate inefficiencies in pricing.
+
+**🔍 Hypothesis:**
+- **H₀:** No significant difference in **COGS** across different **product categories**.
+- **H₁:** At least one product category has significantly different **COGS** when discounts are applied.
+
+**🛠️ ANOVA Model:**
+- **Dependent Variable:** COGS
+- **Independent Variable:** Product Category (Categorical)
+
+---
