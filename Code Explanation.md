@@ -1,3 +1,35 @@
+```python
+# Import necessary libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load dataset (Power BI automatically provides 'dataset')
+df = dataset
+
+# Rename columns to remove any extra spaces
+df.columns = df.columns.str.strip()
+
+# Aggregate sales by country
+sales_by_country = df.groupby("Country", as_index=False)["Sales"].sum()
+
+# Sort values for better visualization
+sales_by_country = sales_by_country.sort_values(by="Sales", ascending=False)
+
+# Create a bar chart
+plt.figure(figsize=(10, 6))
+plt.bar(sales_by_country["Country"], sales_by_country["Sales"])
+
+# Customize chart
+plt.xlabel("Country")
+plt.ylabel("Total Sales")
+plt.title("Total Sales by Country")
+plt.xticks(rotation=45)
+
+# Show the plot
+plt.show()
+```
+
+
 ### **1. Importing Necessary Libraries**
 ```python
 import pandas as pd
