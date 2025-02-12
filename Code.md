@@ -40,12 +40,7 @@ groups = [group['Profit'].values for name, group in df_clean.groupby('Discount B
 # Perform one-way ANOVA
 anova_result = stats.f_oneway(*groups)
 
-fig = plt.figure(figsize=(10, 1.5))
-text = fig.text(0.0, 0.5, 'ANOVA Test Results:\n\nP-value= ' + str(anova_result.pvalue),
-                ha='left', va='center', size=15)
-text.set_path_effects([path_effects.Normal()])
-
-plt.show()
+print(anova_result.pvalue)
 ```
 
 ## Run Tukey's Posthoc
