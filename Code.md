@@ -1,3 +1,8 @@
+## Install required packages
+```python
+!pip install matplotlib pandas statsmodels scipy openpyxl
+```
+
 ## Open Excel Files
 ```python
 import pandas as pd
