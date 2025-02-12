@@ -75,14 +75,14 @@ fig, axes = plt.subplots(1, 2, figsize=(14, 6))
 
 # Scatter Plot: Discounts vs Sales with Trendline
 sns.regplot(ax=axes[0], x=df["Discounts"], y=df["Sales"], scatter_kws={"alpha": 0.5}, line_kws={"color": "blue"})
-axes[0].set_title("Corr of Discounts on Sales")
+axes[0].set_title("Corr of Discounts and Sales")
 axes[0].set_xlabel("Discounts")
 axes[0].set_ylabel("Sales")
 axes[0].text(0.05, 0.9, f"Corr: {correlation_sales:.2f}", transform=axes[0].transAxes, fontsize=12, color="blue", fontweight='bold')
 
 # Scatter Plot: Discounts vs Profit with Trendline
 sns.regplot(ax=axes[1], x=df["Discounts"], y=df["Profit"], scatter_kws={"alpha": 0.5}, line_kws={"color": "red"})
-axes[1].set_title("Corr of Discounts on Profit")
+axes[1].set_title("Corr of Discounts and Profit")
 axes[1].set_xlabel("Discounts")
 axes[1].set_ylabel("Profit")
 axes[1].text(0.05, 0.9, f"Corr: {correlation_profit:.2f}", transform=axes[1].transAxes, fontsize=12, color="red", fontweight='bold')
