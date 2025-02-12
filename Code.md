@@ -50,6 +50,48 @@ plt.xticks(rotation=45)
 # Show the plot
 plt.show()
 ```
+## Correlation
+
+```python
+# Import necessary libraries
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Replace with the raw URL of your .xlsx file
+github_url = "https://github.com/afifhusman/powerbi_prubsn/raw/refs/heads/main/fin_sample.xlsx"
+
+# Read the Excel file
+df = pd.read_excel(github_url)
+
+# Rename columns to remove any extra spaces
+df.columns = df.columns.str.strip()
+
+# Calculate correlation values
+correlation_sales = dataset["Discounts"].corr(dataset["Sales"])
+correlation_profit = dataset["Discounts"].corr(dataset["Profit"])
+
+# Create figure with two subplots
+fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+# Scatter Plot: Discounts vs Sales with Trendline
+sns.regplot(ax=axes[0], x=dataset["Discounts"], y=dataset["Sales"], scatter_kws={"alpha": 0.5}, line_kws={"color": "blue"})
+axes[0].set_title("Corr of Discounts on Sales")
+axes[0].set_xlabel("Discounts")
+axes[0].set_ylabel("Sales")
+axes[0].text(0.05, 0.9, f"Corr: {correlation_sales:.2f}", transform=axes[0].transAxes, fontsize=12, color="blue", fontweight='bold')
+
+# Scatter Plot: Discounts vs Profit with Trendline
+sns.regplot(ax=axes[1], x=dataset["Discounts"], y=dataset["Profit"], scatter_kws={"alpha": 0.5}, line_kws={"color": "red"})
+axes[1].set_title("Corr of Discounts on Profit")
+axes[1].set_xlabel("Discounts")
+axes[1].set_ylabel("Profit")
+axes[1].text(0.05, 0.9, f"Corr: {correlation_profit:.2f}", transform=axes[1].transAxes, fontsize=12, color="red", fontweight='bold')
+
+# Show the plots
+plt.tight_layout()
+plt.show()
+```
+
 ## Run ANOVA and Diplay p-value
 
 ```python
