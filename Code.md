@@ -176,3 +176,20 @@ for i, (diff, p) in enumerate(zip(mean_diff, p_values)):
 # Show plot
 plt.show()
 ```
+
+## **Note
+If you are using Power Bi Desktop, replace the following in the above code:
+
+```python
+# Read the data
+github_url = "https://github.com/afifhusman/powerbi_prubsn/raw/refs/heads/main/fin_sample.xlsx"
+
+# Read the Excel file
+df = pd.read_excel(github_url)
+```
+
+with
+
+```python
+df = dataset
+```
