@@ -85,7 +85,7 @@ sns.regplot(ax=axes[1], x=df["Discounts"], y=df["Profit"], scatter_kws={"alpha":
 axes[1].set_title("Corr of Discounts and Profit")
 axes[1].set_xlabel("Discounts")
 axes[1].set_ylabel("Profit")
-axes[1].text(0.05, 0.9, f"Corr: {correlation_profit:.2f}", transform=axes[1].transAxes, fontsize=12, color="red", fontweight='bold')
+axes[1].text(0.15, 0.9, f"Corr: {correlation_profit:.2f}", transform=axes[1].transAxes, fontsize=12, color="red", fontweight='bold')
 
 # Show the plots
 plt.tight_layout()
