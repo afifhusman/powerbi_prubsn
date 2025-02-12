@@ -92,7 +92,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-## Run ANOVA and Diplay p-value
+## Run ANOVA and Display p-value
 
 ```python
 import matplotlib.pyplot as plt
